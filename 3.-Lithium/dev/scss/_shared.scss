@@ -1,0 +1,15 @@
+// -------------------------------------
+// ★ Shared styles - these styles are shared across mutliple pages, components
+// -------------------------------------
+
+body {
+	background: url(../images/bg-tile.png);
+}
+
+img.inject-me { display: none; }
+
+a {
+  text-decoration: none;
+  @include antialias;
+  @include transition(all .3s ease);
+}

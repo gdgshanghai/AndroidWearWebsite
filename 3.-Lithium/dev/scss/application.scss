@@ -1,0 +1,50 @@
+// =====================================
+// ★
+// ★ Theme Name: HTML5 One Page Template
+// ★ Category: HTML Template
+// ★ Technologies: HTML5, css3, jquery, svg
+// ★ Version: 1.0
+// ★ Author: Vadim Goncharov (@owldesign) 
+// ★ Date: 6.30.14 
+// ★
+// =====================================
+
+
+
+// -------------------------------------
+// ★ Core
+// -------------------------------------
+// 3rd Party Libraries
+@import "lib/bourbon/bourbon"; // Mixins, functions, etc https://github.com/thoughtbot/bourbon
+
+// Variables
+@import "variables"; // Variables, mixins, settings, etc
+
+// Shared Styles
+@import "shared"; // Shared styles
+
+
+// -------------------------------------
+// ★ Layout
+// -------------------------------------
+@import "layout/layout"; // Layotus, etc
+
+// -------------------------------------
+// ★ Typography
+// -------------------------------------
+@import "typography/type"; // Headers, paragraphs, etc
+
+// -------------------------------------
+// ★ Components
+// -------------------------------------
+@import "components/form"; // Form styles
+@import "components/buttons"; // Button styles
+
+// -------------------------------------
+// ★ Pages
+// -------------------------------------
+@import "pages/home-page"; // Home Page
+
+
+// Responsive
+@import "responsive"; // Responsive styles | Optional

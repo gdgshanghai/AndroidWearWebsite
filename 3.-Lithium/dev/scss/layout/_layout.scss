@@ -1,0 +1,18 @@
+// -------------------------------------
+// ★ Layout
+// -------------------------------------
+
+.site-inner {
+  position: relative;
+  width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-inner-abs {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: $max-width;
+  margin-left: -($max-width / 2);
+}

@@ -1,0 +1,184 @@
+// -------------------------------------
+// ★ Responsive Styles
+// -------------------------------------
+
+// Standard 960 or larger (browsers) 
+@media only screen and (min-width: 960px) {
+
+}
+
+// Smaller than standard 960 (devices and browsers)
+@media only screen and (max-width: 959px) {
+
+}
+
+// Tablet Portrait size to standard 960 (devices and browsers)
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.site-inner { width: $tablet; }
+	#page-hero .copy-02 { padding: 0 140px; }
+	#page-about {
+		.columns {
+			padding: 0 40px;
+		}
+	}
+
+	#page-work { overflow: hidden; }
+	#work-grid {
+		left: 50%;
+		margin-left: -310px;
+	}
+
+	#page-photography .photo-item { margin: 0 10px 20px 10px; }
+	#page-photography .photo-item figure { @include size(235px); }
+}
+
+// All Mobile Sizes (devices and browser)
+@media only screen and (max-width: 767px) {
+
+}
+
+// Mobile Landscape Size to Tablet Portrait (devices and browsers)
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+
+}
+
+// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+@media only screen and (max-width: 767px) {
+	#page-container { overflow: hidden; }
+	.section { padding: 50px 0; }
+	.site-inner { width: $mobile; }
+	.h-01 { font-size: 36px !important; }
+	#page-hero .brand-logo { padding: 20px 0 20px 0; }
+	#page-hero .h-01 { margin-bottom: 20px; }
+	#page-hero .copy-02 { padding: 0 40px; margin-bottom: 30px; }
+
+	// Page About
+	#page-about {
+		.h-01 { margin: 40px 0 40px 0;  }
+		.h-03 { margin-bottom: 10px; }
+		.copy-01 {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		.copy-02 { line-height: 24px; }
+		.columns { display: block; }
+		aside {
+			float: none;
+			width: 100%;
+			padding: 0 20px; 
+			margin: 0 0 30px 0;
+			text-align: center;
+			@include box-sizing(border-box);
+		}
+	}
+
+	// Page Work
+	#page-work {
+		.h-01 { margin-bottom: 20px; }
+		.mobile-filter-select {
+			position: relative;
+			display: block;
+			margin: 30px 0;
+			font: {
+				family: $segoeBold;
+				size: 14px;
+			}
+			color: white;
+			text-align: center;
+			&:after {
+				content: "+";
+				position: relative;
+				left: 5px;
+			}
+			&.opened {
+				&:after { content: "-"; }
+			}
+		}
+		#work-filter {
+			display: none;
+			height: 145px;
+			a {
+				position: relative;
+				text-align: center;
+				display: block;
+				margin-bottom: 15px;
+				border: none;
+				padding: 0;
+				&.active { 
+					&:after {
+						content: "";
+						display: block;
+						height: 3px;
+						width: 60px;
+						text-align: center;
+						position: absolute;
+						bottom: -8px;
+						left: 50%;
+						margin-left: -31px;
+						@include size(60px 3px);
+						background: $purpleColor;
+					}
+				}
+			}
+		}
+		#work-grid {
+			left: 50%;
+			margin-left: -150px;
+			width: 300px;
+		}
+		.button {
+			margin-top: 0;
+		}
+	}
+
+	// Page Photography
+	#page-photography {
+		.h-01 { margin: 0px 0 40px 0;  }
+		.copy-01 {
+			font-size: 18px;
+			line-height: 24px;
+			padding: 0 20px;
+		}
+		.photo-item {
+			float: none;
+			margin: 0 auto 10px auto;
+			display: inline-block;
+		}
+		.button {
+			margin-top: 40px;
+		}
+	}
+
+	// Page Signup
+	#page-signup {
+		.copy-02 {
+			padding: 0 20px;
+		}
+		input, button {
+			width: 90%;
+			@include box-sizing(border-box);
+		}
+		input {
+			margin-right: auto;
+			padding: 18px 20px;
+		}
+	}
+
+	// Page Footer
+	#page-footer {
+		.social-links { margin: 40px 0; }
+		.social-links a { margin: 0 10px; }
+		.copy-02 { margin-bottom: 10px; font-size: 12px; line-height: 12px; }
+	}
+}
+
+
+
+
+// -------------------------------------
+// ★ Mobile Styles
+// -------------------------------------
+body {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	// -webkit-user-select: none;
+}
