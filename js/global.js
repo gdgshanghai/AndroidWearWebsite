@@ -1,7 +1,11 @@
 (function() {
   $(function() {
-    var mySwiper;
-    return mySwiper = $('.swiper-container').swiper({
+    var mainSwiper, mySwiper;
+    mySwiper = $('.swiper-container').swiper({
+      mode: 'vertical',
+      keyboardControl: true
+    });
+    return mainSwiper = $('.main-swiper').swiper({
       mode: 'horizontal',
       DOMAnimation: false,
       keyboardControl: true

@@ -19,27 +19,37 @@ html
     .container
       .watch-wrapper
         .swiper-container
-          include ./main-content.jade
+          .swiper-wrapper
+            //- .swiper-slide.one-screen
+            //-   | 13:49
+            .swiper-slide.one-screen
+              .main-swiper.one-screen
+                include ./main-content.jade
+            .swiper-slide.one-screen#register
+              .content-wrapper.mask
+                a#register-btn
+                .register-tip 立即报名
 
     script(type='text/javascript', src=ASSETPATH + 'js/global.js')
-    //- script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')
-    //- script(type='text/javascript').
-    //-   function initialize() {
-    //-     var mapOptions = {
-    //-       center: new google.maps.LatLng(31.202756, 121.604072),
-    //-       zoom: 16,
-    //-       mapTypeId: google.maps.MapTypeId.ROADMAP
-    //-     };
+    
+    script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')
+    script(type='text/javascript').
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(31.202756, 121.604072),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
         
-    //-     var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
         
-    //-     var marker = new google.maps.Marker({
-    //-       position: map.getCenter(),
-    //-       map: map,
-    //-       title: '上海市浦东新区博云路2号浦软大厦'
-    //-     });
-    //-   }
+        var marker = new google.maps.Marker({
+          position: map.getCenter(),
+          map: map,
+          title: '上海市浦东新区博云路2号浦软大厦'
+        });
+      }
 
-    //-   $(function() {
-    //-     initialize();
-    //-   });
+      $(function() {
+        initialize();
+      });

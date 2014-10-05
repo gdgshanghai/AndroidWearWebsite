@@ -1,38 +1,44 @@
 html, body {
-  background-color: #666;
+  background-color: #3CEFFF;
 }
 
 @watchsize: 600px;
+
+.box-sizing(@arg) {
+  -wekit-box-sizing: @arg;
+  -moz-box-sizing: @arg;
+  box-sizing: @arg;
+}
 
 .watch-band {
   @bandw: @watchsize/2;
   position: absolute;
   height: 100%;
   width: @bandw;
-  background-color: #222;
+  background-color: #FF7A00;
   top: 0;
   left: 50%;
   margin-left: -@bandw/2;
   z-index: 0;
+  border: 10px solid #ffe000;
+  border-top: none;
+  border-bottom: none;
+  .box-sizing(border-box);
 }
 
 .container {
-  // width: 100%;
-  // max-width: 600px;
-  // max-height: auto;
   position: relative;
   width: @watchsize;
   height: @watchsize;
-  margin: 3% auto 0;
+  top: 50%;
+  margin: -@watchsize/2 auto 0;
   z-index: 10;
-  // background-color: white;
 }
 
 .watch-wrapper {
-  box-sizing: border-box;
+  .box-sizing(border-box);
   width: 100%;
   height: 100%;
-  // height: auto;
   border: 12px solid grey;
   border-radius: 50%;
   background-color: white;
@@ -45,16 +51,14 @@ html, body {
   overflow: hidden;
 }
 .swiper-wrapper {
-  // border-radius: 50%;
   overflow: hidden;
 }
 .one-screen {
   position: relative;
   height: 100%;
+  width: 100%;
   color: #555;
   background-color: white;
-  // border-radius: 50%;
-  // overflow: hidden;
 
   .content-gen(@h) {
     height: @h;
@@ -62,7 +66,6 @@ html, body {
     .content {
       margin: 0 auto;
     }
-    // padding: 1px 0 0;
     background-color: white;
 
     .main-icon {
@@ -121,7 +124,6 @@ html, body {
   }
   i {
     vertical-align: middle;
-    // margin-right: 0.6em;
     width: 2em;
     text-align: center;
   }
@@ -158,18 +160,16 @@ html, body {
 #agenda {
   i {
     vertical-align: middle;
-    // margin-right: 0.6em;
     width: 2em;
     text-align: center;
   }
   .top {
     text-align: center;
-    padding: 10% 0 4%;
-    height: 6%;
+    padding: 12% 0 5%;
+    height: 8%;
     color: white;
     font-size: 1.6em;
-    background-color: #44f;
-    // margin-bottom: 5%;
+    background-color: #44D2FF;
     span {
       vertical-align: middle;
       line-height: 2em;
@@ -181,32 +181,45 @@ html, body {
 
     .sections {
       list-style: none;
-      padding: 0 0 20% 0;
+      padding: 0 0 0 0;
       margin: 0;
 
       & > li {
-        box-sizing: border-box;
-        // border-top: 1px solid grey;
+        .box-sizing(border-box);
         border-bottom: 2px solid #ddd;
-        border-left: 20px solid darken(#44f, 30%);
-        height: 25%;
+        border-left: 18px solid #44ADFF;
+        height: 20%;
         width: 100%;
       }
       .section {
-        width: 80%;
+        width: 70%;
         padding-top: 2%;
         margin: 0 auto;
         .time {
-          font-size: 1.6em;
-          line-height: 2em;
+          font-size: 1.4em;
+          line-height: 1.6em;
           font-weight: bold;
         }
         .info {
-          font-size: 2.2em;
+          font-size: 2em;
+        }
+        &.s1 {
+          .time { color: #6bbe33; }
+          // .info { color: black; }
+        }
+        &.s2 {
+          .time { color: #ff7a00; }
+          // .info { color: black; }
+        }
+        &.s3 {
+          .time { color: #3eaed1; }
+          // .info { color: black; }
+        }
+        &.s4 {
+          .time { color: #dab700; }
+          // .info { color: black; }
         }
       }
-      // width: 75%;
-      // margin: 0 auto;
     }
   }
 }
@@ -214,7 +227,6 @@ html, body {
 .speaker-intro {
   .speaker {
     padding-top: 5%;
-    // text-align: right;
     .title {
       margin-right: 0.5em;
       font-size: 1em;
@@ -259,12 +271,10 @@ html, body {
     height: 15%;
     width: 15%;
     float: left;
-    // padding-top: 5%;
     margin-left: 2%;
     margin-right: 5%;
   }
   .location-info {
-    // height: 30%;
     padding-top: 2%;
     .info {
       font-size: 1.2em;
@@ -272,5 +282,37 @@ html, body {
     .tra {
       margin-top: 2%;
     }
+  }
+}
+
+#register {
+  background: url("../image/bg3.jpg") no-repeat 100% center;
+  background-size: auto 115%;
+  .content-wrapper.mask {
+    background-color: rgba(0,0,0,0.3);
+  }
+  .register-tip {
+    font-size: 2em;
+    color: white;
+    padding-top: 75%;
+    text-align: center;
+  }
+  #register-btn {
+    @btnsize: 40%;
+    position: absolute;
+    display: block;
+    height: @btnsize;
+    width: @btnsize;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -@btnsize/2;
+    margin-left: -@btnsize/2;
+    z-index: 50;
+
+    cursor: pointer;
+
+    background: url("../image/register.png") no-repeat center top;
+    background-size: contain;
   }
 }

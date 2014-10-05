@@ -1,5 +1,12 @@
 $ ()->
+
+
   mySwiper = $('.swiper-container').swiper
+    mode: 'vertical'
+    # DOMAnimation: false
+    keyboardControl: true
+
+  mainSwiper = $('.main-swiper').swiper
     mode: 'horizontal'
     DOMAnimation: false
     keyboardControl: true
@@ -10,4 +17,5 @@ $ ()->
   #   freeMode: true
 
   
-  # mySwiper.swipeTo(4)
+  # mySwiper.swipeTo(2)
+  # mainSwiper.swipeTo(2)
