@@ -7,9 +7,14 @@ module.exports = (grunt)->
         src: 'css/*.less'
         dest: 'css/main.css'
 
+    coffee:
+      files:
+        src: 'js/*.coffee'
+        dest: 'js/global.js'
+
     jade:
       files:
-        src: 'index.jade'
+        src: 'views/index.jade'
         dest: 'index.html'
 
     connect:
@@ -19,18 +24,24 @@ module.exports = (grunt)->
           # keepalive: true
 
     watch:
-      jade:
-        files: 'index.jade'
-        tasks: ['jade']
-        options:
-          livereload: true
       less:
         files: 'css/*.less'
         tasks: ['less']
         options:
           livereload: true
+      coffee:
+        files: 'js/*.coffee'
+        tasks: ['coffee']
+        options:
+          livereload: true
+      jade:
+        files: 'views/*.jade'
+        tasks: ['jade']
+        options:
+          livereload: true
 
   grunt.loadNpmTasks 'grunt-contrib-less'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -38,4 +49,10 @@ module.exports = (grunt)->
   grunt.registerTask 'default', [
     'connect:server'
     'watch'
+  ]
+
+  grunt.registerTask 'compile', [
+    'less'
+    'coffee'
+    'jade'
   ]

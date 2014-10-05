@@ -1,0 +1,45 @@
+- var ASSETPATH = ''
+doctype jade
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title Android Wear 盛宴 - GDG Shanghai DevFest season 2014
+
+    link(type='text/css', rel='stylesheet', href='http://cdn.staticfile.org/normalize/3.0.1/normalize.min.css')
+    link(type='text/css', rel='stylesheet', href='http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css')
+    script(type='text/javascript', src='http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js')
+    
+    link(type='text/css', rel='stylesheet', href='bower_components/swiper/dist/idangerous.swiper.css')
+    script(type='text/javascript', src='bower_components/swiper/dist/idangerous.swiper.min.js')
+
+    link(type='text/css', rel='stylesheet', href=ASSETPATH + 'css/main.css')
+
+  body
+    .watch-band
+    .container
+      .watch-wrapper
+        .swiper-container
+          include ./main-content.jade
+
+    script(type='text/javascript', src=ASSETPATH + 'js/global.js')
+    //- script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')
+    //- script(type='text/javascript').
+    //-   function initialize() {
+    //-     var mapOptions = {
+    //-       center: new google.maps.LatLng(31.202756, 121.604072),
+    //-       zoom: 16,
+    //-       mapTypeId: google.maps.MapTypeId.ROADMAP
+    //-     };
+        
+    //-     var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+        
+    //-     var marker = new google.maps.Marker({
+    //-       position: map.getCenter(),
+    //-       map: map,
+    //-       title: '上海市浦东新区博云路2号浦软大厦'
+    //-     });
+    //-   }
+
+    //-   $(function() {
+    //-     initialize();
+    //-   });
