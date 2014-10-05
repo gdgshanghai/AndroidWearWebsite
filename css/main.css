@@ -4,13 +4,13 @@ body {
 }
 .watch-band {
   position: absolute;
+  z-index: 0;
   height: 100%;
   width: 300px;
-  background-color: #FF7A00;
   top: 0;
   left: 50%;
   margin-left: -150px;
-  z-index: 0;
+  background-color: #FF7A00;
   border: 10px solid #ffe000;
   border-top: none;
   border-bottom: none;
@@ -19,12 +19,14 @@ body {
   box-sizing: border-box;
 }
 .container {
-  position: relative;
+  position: absolute;
+  z-index: 10;
   width: 600px;
   height: 600px;
   top: 50%;
-  margin: -300px auto 0;
-  z-index: 10;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
 }
 .watch-wrapper {
   -wekit-box-sizing: border-box;
@@ -314,4 +316,165 @@ body {
   cursor: pointer;
   background: url("../image/register.png") no-repeat center top;
   background-size: contain;
+}
+@media (max-width: 768px) {
+  .watch-band {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 175px;
+    top: 0;
+    left: 50%;
+    margin-left: -87.5px;
+    background-color: #FF7A00;
+    border: 10px solid #ffe000;
+    border-top: none;
+    border-bottom: none;
+    -wekit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .container {
+    position: absolute;
+    z-index: 10;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+  }
+  .one-screen .content-wrapper {
+    height: 100%;
+    margin-top: 0%;
+    background-color: white;
+  }
+  .one-screen .content-wrapper .content {
+    margin: 0 auto;
+  }
+  .one-screen .content-wrapper .main-icon {
+    position: absolute;
+    top: 0%;
+    right: 20%;
+    height: 13%;
+    width: 13%;
+    margin-top: -6.5%;
+    margin-right: -6.5%;
+    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+  }
+  .one-screen .content-wrapper.half {
+    height: 30%;
+    margin-top: 70%;
+    background-color: white;
+  }
+  .one-screen .content-wrapper.half .content {
+    margin: 0 auto;
+  }
+  .one-screen .content-wrapper.half .main-icon {
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    height: 13%;
+    width: 13%;
+    margin-top: -6.5%;
+    margin-right: -6.5%;
+    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+  }
+  .one-screen .content-wrapper.with-bg-l {
+    height: 30%;
+    margin-top: 70%;
+    background-color: white;
+  }
+  .one-screen .content-wrapper.with-bg-l .content {
+    margin: 0 auto;
+  }
+  .one-screen .content-wrapper.with-bg-l .main-icon {
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    height: 13%;
+    width: 13%;
+    margin-top: -6.5%;
+    margin-right: -6.5%;
+    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+  }
+  #main-title {
+    font-size: 12px;
+  }
+  #main-title .title {
+    padding-top: 8%;
+    font-size: 14px;
+  }
+  #main-title h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 6px 0;
+  }
+  #date-info i {
+    width: 28px;
+  }
+  #date-info .time,
+  #date-info .address,
+  #date-info .note {
+    font-size: 16px;
+  }
+  #date-info .time,
+  #date-info .address {
+    margin: 6px auto;
+  }
+  #date-info .note {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10px;
+  }
+  #date-info .date {
+    font-size: 16px;
+  }
+  #date-info .date span {
+    line-height: 16px;
+  }
+  #agenda .top {
+    font-size: 18px;
+  }
+  #agenda .agenda-wrapper .sections .section .time {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  #agenda .agenda-wrapper .sections .section .info {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .speaker-intro .speaker .title {
+    font-size: 12px;
+  }
+  .speaker-intro .speaker .name {
+    font-size: 16px;
+  }
+  .speaker-intro .topic {
+    margin-top: 6px;
+  }
+  .speaker-intro .topic .topic-name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  #location .content {
+    padding-top: 6px;
+  }
+  #location .icon-turn-right {
+    margin-top: 6px;
+  }
+  #location .location-info .info {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  #location .location-info .tra {
+    margin-top: 2%;
+    font-size: 14px;
+  }
 }

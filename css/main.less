@@ -10,30 +10,42 @@ html, body {
   box-sizing: @arg;
 }
 
-.watch-band {
-  @bandw: @watchsize/2;
-  position: absolute;
-  height: 100%;
-  width: @bandw;
-  background-color: #FF7A00;
-  top: 0;
-  left: 50%;
-  margin-left: -@bandw/2;
-  z-index: 0;
-  border: 10px solid #ffe000;
-  border-top: none;
-  border-bottom: none;
-  .box-sizing(border-box);
+.layout(@w) {
+  .watch-band {
+    @bandw: @w/2;
+    position: absolute;
+    z-index: 0;
+    
+    height: 100%;
+    width: @bandw;
+
+    top: 0;
+    left: 50%;
+    margin-left: -@bandw/2;
+    
+    background-color: #FF7A00;
+    border: 10px solid #ffe000;
+    border-top: none;
+    border-bottom: none;
+    
+    .box-sizing(border-box);
+  }
+
+  .container {
+    position: absolute;
+    z-index: 10;
+    
+    width: @w;
+    height: @w;
+    
+    top: 50%;
+    left: 50%;
+    margin-top: -@w/2;
+    margin-left: -@w/2;
+  }
 }
 
-.container {
-  position: relative;
-  width: @watchsize;
-  height: @watchsize;
-  top: 50%;
-  margin: -@watchsize/2 auto 0;
-  z-index: 10;
-}
+.layout(600px);
 
 .watch-wrapper {
   .box-sizing(border-box);
@@ -315,4 +327,133 @@ html, body {
     background: url("../image/register.png") no-repeat center top;
     background-size: contain;
   }
+}
+
+@media (max-width: 768px) {
+  .layout(350px);
+
+  .one-screen {
+    .content-gen(@h) {
+      height: @h;
+      margin-top: 100%-@h;
+      .content {
+        margin: 0 auto;
+      }
+      background-color: white;
+
+      .main-icon {
+        @size: 13%;
+        position: absolute;
+        top: 100%-@h;
+        right: 20%;
+        height: @size;
+        width: @size;
+        margin-top: -@size/2;
+        margin-right: -@size/2;
+        background: url("../image/icon-gdg.jpg") no-repeat center center;
+        background-size: contain;
+        border-radius: 50%;
+      }
+    }
+
+    .content-wrapper {
+      .content-gen(100%);
+      &.half { .content-gen(30%); }
+      &.with-bg-l { .content-gen(30%); }
+    }
+  }
+
+  #main-title {
+    font-size: 12px;
+    .title {
+      padding-top: 8%;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 6px 0;
+    }
+  }
+
+  #date-info {
+    i {
+      width: 28px;
+    }
+    .time, .address, .note {
+      font-size: 16px;
+    }
+    .time, .address {
+      margin: 6px auto;
+    }
+    .note {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 10px;
+    }
+    .date {
+      font-size: 16px;
+      span {
+        line-height: 16px;
+      }
+    }
+  }
+
+  #agenda {
+    .top {
+      font-size: 18px;
+    }
+    .agenda-wrapper {
+      .sections {
+        .section {
+          .time {
+            font-size: 16px;
+            line-height: 16px;
+          }
+          .info {
+            font-size: 20px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .speaker-intro {
+    .speaker {
+      .title {
+        font-size: 12px;
+      }
+      .name {
+        font-size: 16px;
+      }
+    }
+    .topic {
+      margin-top: 6px;
+      .topic-name {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  #location {
+    .content {
+      padding-top: 6px;
+    }
+    .icon-turn-right {
+      margin-top: 6px;
+    }
+    .location-info {
+      .info {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      .tra {
+        margin-top: 2%;
+        font-size: 14px;
+      }
+    }
+  }
+
 }

@@ -18,4 +18,4 @@ $ ()->
 
   
   # mySwiper.swipeTo(2)
-  # mainSwiper.swipeTo(2)
+  # mainSwiper.swipeTo(4)
