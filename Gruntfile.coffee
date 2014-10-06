@@ -1,8 +1,21 @@
 module.exports = (grunt)->
+
+  CSS_ASSERT_PATH = '"../"';
+  JS_ASSERT_PATH = ''
+
+  VERSION = grunt.option 'ver'
+  if VERSION
+    QINIU_CDN = 'http://devfest.qiniudn.com/2014/' + VERSION + '/'
+    CSS_ASSERT_PATH = "\"#{QINIU_CDN}\""
+    JS_ASSERT_PATH = QINIU_CDN
+
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
 
     less:
+      options:
+        modifyVars:
+          asset: CSS_ASSERT_PATH
       files:
         src: 'css/*.less'
         dest: 'css/main.css'
@@ -13,6 +26,9 @@ module.exports = (grunt)->
         dest: 'js/global.js'
 
     jade:
+      options:
+        data:
+          ASSETPATH: JS_ASSERT_PATH
       files:
         src: 'views/index.jade'
         dest: 'index.html'
@@ -21,7 +37,6 @@ module.exports = (grunt)->
       server:
         options:
           port: 3000
-          # keepalive: true
 
     watch:
       less:

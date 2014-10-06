@@ -2,6 +2,8 @@ html, body {
   background-color: #3CEFFF;
 }
 
+@asset: '../';
+@ASSETPATH: '@{asset}'; // ASSETPATH pecified by gruntfile
 @watchsize: 600px;
 
 .box-sizing(@arg) {
@@ -89,7 +91,7 @@ html, body {
       width: @size;
       margin-top: -@size/2;
       margin-right: -@size/2;
-      background: url("../image/icon-gdg.jpg") no-repeat center center;
+      background: url("@{ASSETPATH}image/icon-gdg.jpg") no-repeat center center;
       background-size: contain;
       border-radius: 50%;
     }
@@ -119,7 +121,7 @@ html, body {
 }
 
 #main-title {
-  background: url("../image/bg2.jpg") no-repeat center top;
+  background: url("@{ASSETPATH}image/bg2.jpg") no-repeat center top;
   background-size: auto 70%;
   background-color: white;
   .content {
@@ -259,7 +261,7 @@ html, body {
 }
 
 #speaker1 {
-  background: url("../image/speaker1.png") no-repeat center top;
+  background: url("@{ASSETPATH}image/speaker1.png") no-repeat center top;
   background-size: auto 100%;
   background-color: white;
 
@@ -278,10 +280,10 @@ html, body {
     padding-top: 3%;
   }
   .icon-turn-right {
-    background: url("../image/turnright.gif") no-repeat center top;
+    background: url("@{ASSETPATH}image/turnright.gif") no-repeat center top;
     background-size: contain;
-    height: 15%;
-    width: 15%;
+    height: 60px;
+    width: 60px;
     float: left;
     margin-left: 2%;
     margin-right: 5%;
@@ -298,7 +300,7 @@ html, body {
 }
 
 #register {
-  background: url("../image/bg3.jpg") no-repeat 100% center;
+  background: url("@{ASSETPATH}image/bg3.jpg") no-repeat 100% center;
   background-size: auto 115%;
   .content-wrapper.mask {
     background-color: rgba(0,0,0,0.3);
@@ -324,7 +326,7 @@ html, body {
 
     cursor: pointer;
 
-    background: url("../image/register.png") no-repeat center top;
+    background: url("@{ASSETPATH}image/register.png") no-repeat center top;
     background-size: contain;
   }
 }
@@ -350,7 +352,7 @@ html, body {
         width: @size;
         margin-top: -@size/2;
         margin-right: -@size/2;
-        background: url("../image/icon-gdg.jpg") no-repeat center center;
+        background: url("@{ASSETPATH}image/icon-gdg.jpg") no-repeat center center;
         background-size: contain;
         border-radius: 50%;
       }
@@ -443,6 +445,9 @@ html, body {
     }
     .icon-turn-right {
       margin-top: 6px;
+      height: 35px;
+      width: 35px;
+      margin-bottom: 10px;
     }
     .location-info {
       .info {

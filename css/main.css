@@ -70,7 +70,7 @@ body {
   width: 12%;
   margin-top: -6%;
   margin-right: -6%;
-  background: url("../image/icon-gdg.jpg") no-repeat center center;
+  background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
   background-size: contain;
   border-radius: 50%;
 }
@@ -90,7 +90,7 @@ body {
   width: 12%;
   margin-top: -6%;
   margin-right: -6%;
-  background: url("../image/icon-gdg.jpg") no-repeat center center;
+  background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
   background-size: contain;
   border-radius: 50%;
 }
@@ -110,7 +110,7 @@ body {
   width: 12%;
   margin-top: -6%;
   margin-right: -6%;
-  background: url("../image/icon-gdg.jpg") no-repeat center center;
+  background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
   background-size: contain;
   border-radius: 50%;
 }
@@ -127,7 +127,7 @@ body {
   text-align: center;
 }
 #main-title {
-  background: url("../image/bg2.jpg") no-repeat center top;
+  background: url("http://devfest.qiniudn.com/2014/10/image/bg2.jpg") no-repeat center top;
   background-size: auto 70%;
   background-color: white;
 }
@@ -256,7 +256,7 @@ body {
   text-align: center;
 }
 #speaker1 {
-  background: url("../image/speaker1.png") no-repeat center top;
+  background: url("http://devfest.qiniudn.com/2014/10/image/speaker1.png") no-repeat center top;
   background-size: auto 100%;
   background-color: white;
 }
@@ -272,10 +272,10 @@ body {
   padding-top: 3%;
 }
 #location .icon-turn-right {
-  background: url("../image/turnright.gif") no-repeat center top;
+  background: url("http://devfest.qiniudn.com/2014/10/image/turnright.gif") no-repeat center top;
   background-size: contain;
-  height: 15%;
-  width: 15%;
+  height: 60px;
+  width: 60px;
   float: left;
   margin-left: 2%;
   margin-right: 5%;
@@ -290,7 +290,7 @@ body {
   margin-top: 2%;
 }
 #register {
-  background: url("../image/bg3.jpg") no-repeat 100% center;
+  background: url("http://devfest.qiniudn.com/2014/10/image/bg3.jpg") no-repeat 100% center;
   background-size: auto 115%;
 }
 #register .content-wrapper.mask {
@@ -314,7 +314,7 @@ body {
   margin-left: -20%;
   z-index: 50;
   cursor: pointer;
-  background: url("../image/register.png") no-repeat center top;
+  background: url("http://devfest.qiniudn.com/2014/10/image/register.png") no-repeat center top;
   background-size: contain;
 }
 @media (max-width: 768px) {
@@ -360,7 +360,7 @@ body {
     width: 13%;
     margin-top: -6.5%;
     margin-right: -6.5%;
-    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
     background-size: contain;
     border-radius: 50%;
   }
@@ -380,7 +380,7 @@ body {
     width: 13%;
     margin-top: -6.5%;
     margin-right: -6.5%;
-    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
     background-size: contain;
     border-radius: 50%;
   }
@@ -400,7 +400,7 @@ body {
     width: 13%;
     margin-top: -6.5%;
     margin-right: -6.5%;
-    background: url("../image/icon-gdg.jpg") no-repeat center center;
+    background: url("http://devfest.qiniudn.com/2014/10/image/icon-gdg.jpg") no-repeat center center;
     background-size: contain;
     border-radius: 50%;
   }
@@ -468,6 +468,9 @@ body {
   }
   #location .icon-turn-right {
     margin-top: 6px;
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
   }
   #location .location-info .info {
     font-size: 16px;
