@@ -1,5 +1,5 @@
 html, body {
-  background-color: #3CEFFF;
+  background-color: #33CE8E;
 }
 
 @asset: '../';
@@ -25,8 +25,9 @@ html, body {
     left: 50%;
     margin-left: -@bandw/2;
     
-    background-color: #FF7A00;
-    border: 10px solid #ffe000;
+    // background-color: #FF7A00;
+    background-color: #414141;
+    // border: 10px solid #ffe000;
     border-top: none;
     border-bottom: none;
     
@@ -47,7 +48,18 @@ html, body {
   }
 }
 
-.layout(600px);
+.layout(560px);
+
+.register-guide {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  z-index: 2000;
+  top: 50%;
+  margin-top: -310px;
+}
 
 .watch-wrapper {
   position: relative;
@@ -149,7 +161,7 @@ html, body {
   .time, .address, .note {
     width: 75%;
     margin: 0 auto;
-    font-size: 1.4em;
+    font-size: 1.38em;
   }
   .time, .address {
     margin: 2% auto;
@@ -157,7 +169,7 @@ html, body {
   }
   .note {
     text-indent: 2em;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.4em;
     margin-top: 5%;
   }

@@ -8,7 +8,8 @@
     return mainSwiper = $('.main-swiper').swiper({
       mode: 'horizontal',
       DOMAnimation: false,
-      keyboardControl: true
+      keyboardControl: true,
+      loop: true
     });
   });
 

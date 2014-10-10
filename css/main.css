@@ -1,17 +1,16 @@
 html,
 body {
-  background-color: #3CEFFF;
+  background-color: #33CE8E;
 }
 .watch-band {
   position: absolute;
   z-index: 0;
   height: 100%;
-  width: 300px;
+  width: 280px;
   top: 0;
   left: 50%;
-  margin-left: -150px;
-  background-color: #FF7A00;
-  border: 10px solid #ffe000;
+  margin-left: -140px;
+  background-color: #414141;
   border-top: none;
   border-bottom: none;
   -wekit-box-sizing: border-box;
@@ -21,12 +20,22 @@ body {
 .container {
   position: absolute;
   z-index: 10;
-  width: 600px;
-  height: 600px;
+  width: 560px;
+  height: 560px;
   top: 50%;
   left: 50%;
-  margin-top: -300px;
-  margin-left: -300px;
+  margin-top: -280px;
+  margin-left: -280px;
+}
+.register-guide {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  z-index: 2000;
+  top: 50%;
+  margin-top: -310px;
 }
 .watch-wrapper {
   position: relative;
@@ -157,7 +166,7 @@ body {
 #date-info .note {
   width: 75%;
   margin: 0 auto;
-  font-size: 1.4em;
+  font-size: 1.38em;
 }
 #date-info .time,
 #date-info .address {
@@ -166,7 +175,7 @@ body {
 }
 #date-info .note {
   text-indent: 2em;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.4em;
   margin-top: 5%;
 }
@@ -356,8 +365,7 @@ body {
     top: 0;
     left: 50%;
     margin-left: -87.5px;
-    background-color: #FF7A00;
-    border: 10px solid #ffe000;
+    background-color: #414141;
     border-top: none;
     border-bottom: none;
     -wekit-box-sizing: border-box;

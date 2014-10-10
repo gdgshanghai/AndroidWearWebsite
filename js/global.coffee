@@ -10,6 +10,7 @@ $ ()->
     mode: 'horizontal'
     DOMAnimation: false
     keyboardControl: true
+    loop: true
   
   # agendaSwiper = $('.agenda-wrapper').swiper
   #   mode: 'vertical'
