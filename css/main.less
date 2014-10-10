@@ -61,6 +61,28 @@ html, body {
   margin-top: -310px;
 }
 
+.knob {
+  width: 40px;
+  height: 80px;
+  background-color: #9e9e9e;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 10;
+  margin-left: 258px;
+  margin-top: -40px;
+  border-radius: 8px;
+  // width: 20px;
+  // height: 40px;
+  // background-color: rgb(158, 158, 158);
+  // left: 50%;
+  // top: 50%;
+  // position: absolute;
+  // z-index: 10;
+  // margin-left: 162px;
+  // margin-top: -20px;
+}
+
 .watch-wrapper {
   position: relative;
   .box-sizing(border-box);
@@ -378,6 +400,19 @@ html, body {
 
 @media (max-width: 768px) {
   .layout(350px);
+
+  .register-guide {
+    font-size: 16px;
+    margin-top: -210px;
+  }
+
+  .knob {
+    width: 20px;
+    height: 40px;
+    margin-left: 164px;
+    margin-top: -20px;
+    border-radius: 4px;
+  }
 
   .one-screen {
     .content-gen(@h) {

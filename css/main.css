@@ -37,6 +37,18 @@ body {
   top: 50%;
   margin-top: -310px;
 }
+.knob {
+  width: 40px;
+  height: 80px;
+  background-color: #9e9e9e;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 10;
+  margin-left: 258px;
+  margin-top: -40px;
+  border-radius: 8px;
+}
 .watch-wrapper {
   position: relative;
   -wekit-box-sizing: border-box;
@@ -381,6 +393,17 @@ body {
     left: 50%;
     margin-top: -175px;
     margin-left: -175px;
+  }
+  .register-guide {
+    font-size: 16px;
+    margin-top: -210px;
+  }
+  .knob {
+    width: 20px;
+    height: 40px;
+    margin-left: 164px;
+    margin-top: -20px;
+    border-radius: 4px;
   }
   .one-screen .content-wrapper {
     height: 100%;

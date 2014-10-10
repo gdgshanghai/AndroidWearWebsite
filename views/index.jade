@@ -20,6 +20,7 @@ html
   body
     .register-guide 向上滑动查看报名通道
     .watch-band
+    .knob
     .container
       .watch-wrapper
         .swiper-container
@@ -38,23 +39,49 @@ html
     script(type='text/javascript', src=ASSETPATH + 'js/global.js')
     
     //- script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')    
-    //- script(type='text/javascript').
-    //-   function initialize() {
-    //-     var mapOptions = {
-    //-       center: new google.maps.LatLng(31.202756, 121.604072),
-    //-       zoom: 16,
-    //-       mapTypeId: google.maps.MapTypeId.ROADMAP
-    //-     };
+    //- script(type='text/javascript', src='http://maps.googleapis.com.hk/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')    
+    script(type='text/javascript', src='http://ditu.google.cn/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true')    
+    script(type='text/javascript').
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(31.202756, 121.604072),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
         
-    //-     var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
         
-    //-     var marker = new google.maps.Marker({
-    //-       position: map.getCenter(),
-    //-       map: map,
-    //-       title: '上海市浦东新区博云路2号浦软大厦'
-    //-     });
-    //-   }
+        var marker = new google.maps.Marker({
+          position: map.getCenter(),
+          map: map,
+          title: '上海市浦东新区博云路2号浦软大厦'
+        });
+      }
 
-    //-   $(function() {
-    //-     initialize();
-    //-   });
+      $(function() {
+        initialize();
+      });
+
+    //- script(type='text/javascript' src='http://api.map.baidu.com/api?v=2.0&ak=KxgSS1CfPQGODKWidi3EaQom')
+    //- script(type='text/javascript').
+    //-   var map = new BMap.Map("map-container");
+    //-   var point = new BMap.Point(31.202756, 121.604072);
+    //-   map.centerAndZoom(point, 16);
+    //-   var marker = new BMap.Marker(point);
+    //-   map.addOverlay(marker);
+
+    //- script(type='text/javascript').
+    //-   function loadJScript() {
+    //-     var script = document.createElement("script");
+    //-     script.type = "text/javascript";
+    //-     script.src = "http://api.map.baidu.com/api?v=2.0&ak=KxgSS1CfPQGODKWidi3EaQom&callback=init";
+    //-     document.body.appendChild(script);
+    //-   }
+    //-   function init() {
+    //-     var map = new BMap.Map("map-container");
+    //-     var point = new BMap.Point(31.202756, 121.604072);
+    //-     map.centerAndZoom(point, 16);
+    //-     var marker = new BMap.Marker(point);
+    //-     map.addOverlay(marker);
+    //-   }
+    //-   window.onload = loadJScript;  //异步加载地图
