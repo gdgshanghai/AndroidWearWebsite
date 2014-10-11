@@ -35,7 +35,7 @@ body {
   font-size: 20px;
   z-index: 2000;
   top: 50%;
-  margin-top: -310px;
+  margin-top: 310px;
 }
 .knob {
   width: 40px;
@@ -364,6 +364,7 @@ body {
   margin-top: -20%;
   margin-left: -20%;
   z-index: 50;
+  text-decoration: none;
   cursor: pointer;
   background: url("../image/register.png") no-repeat center top;
   background-size: contain;
@@ -396,12 +397,13 @@ body {
   }
   .register-guide {
     font-size: 16px;
-    margin-top: -210px;
+    margin-top: 210px;
   }
   .knob {
+    display: none;
     width: 20px;
     height: 40px;
-    margin-left: 164px;
+    margin-left: 160px;
     margin-top: -20px;
     border-radius: 4px;
   }
