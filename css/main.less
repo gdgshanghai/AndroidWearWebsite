@@ -58,7 +58,19 @@ html, body {
   font-size: 20px;
   z-index: 2000;
   top: 50%;
-  margin-top: 310px;
+
+  .gotoRegister {
+    color: #0af;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &.top {
+    margin-top: -305px;
+  }
+  &.bottom {
+    margin-top: 305px;
+  }
 }
 
 .knob {
@@ -72,15 +84,25 @@ html, body {
   margin-left: 258px;
   margin-top: -40px;
   border-radius: 8px;
-  // width: 20px;
-  // height: 40px;
-  // background-color: rgb(158, 158, 158);
-  // left: 50%;
-  // top: 50%;
-  // position: absolute;
-  // z-index: 10;
-  // margin-left: 162px;
-  // margin-top: -20px;
+}
+
+.watch-mask {
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  img {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+  }
+  .normal {
+    display: block;
+  }
+  .small {
+    display: none;
+  }
 }
 
 .watch-wrapper {
@@ -358,7 +380,7 @@ html, body {
   }
 }
 
-#register {
+.register {
   background: url("@{ASSETPATH}image/bg3.jpg") no-repeat 100% center;
   background-size: auto 115%;
   .content-wrapper.mask {
@@ -377,7 +399,7 @@ html, body {
     padding-top: 280px;
     text-align: center;
   }
-  #register-btn {
+  .register-btn {
     @btnsize: 40%;
     position: absolute;
     display: block;
@@ -404,7 +426,12 @@ html, body {
 
   .register-guide {
     font-size: 16px;
-    margin-top: 210px;
+    &.top {
+      margin-top: -210px;
+    }
+    &.bottom {
+      margin-top: 210px;
+    }
   }
 
   .knob {
@@ -414,6 +441,16 @@ html, body {
     margin-left: 160px;
     margin-top: -20px;
     border-radius: 4px;
+  }
+
+  .watch-mask {
+    .normal {
+      display: none;
+    }
+    .small {
+      // margin-left: 1px;
+      display: block;
+    }
   }
 
   .one-screen {
@@ -544,7 +581,7 @@ html, body {
     }
   }
 
-  #register {
+  .register {
     .prize-info {
       font-size: 18px;
       line-height: 24px;

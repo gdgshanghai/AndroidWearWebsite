@@ -35,7 +35,17 @@ body {
   font-size: 20px;
   z-index: 2000;
   top: 50%;
-  margin-top: 310px;
+}
+.register-guide .gotoRegister {
+  color: #0af;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.register-guide.top {
+  margin-top: -305px;
+}
+.register-guide.bottom {
+  margin-top: 305px;
 }
 .knob {
   width: 40px;
@@ -48,6 +58,24 @@ body {
   margin-left: 258px;
   margin-top: -40px;
   border-radius: 8px;
+}
+.watch-mask {
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.watch-mask img {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.watch-mask .normal {
+  display: block;
+}
+.watch-mask .small {
+  display: none;
 }
 .watch-wrapper {
   position: relative;
@@ -332,27 +360,27 @@ body {
 #location .location-info .tra {
   margin-top: 2%;
 }
-#register {
+.register {
   background: url("../image/bg3.jpg") no-repeat 100% center;
   background-size: auto 115%;
 }
-#register .content-wrapper.mask {
+.register .content-wrapper.mask {
   background-color: rgba(0, 0, 0, 0.3);
 }
-#register .prize-info {
+.register .prize-info {
   text-align: center;
   color: white;
   padding-top: 80px;
   font-size: 1.6em;
   line-height: 1.4em;
 }
-#register .register-tip {
+.register .register-tip {
   font-size: 2em;
   color: white;
   padding-top: 280px;
   text-align: center;
 }
-#register #register-btn {
+.register .register-btn {
   position: absolute;
   display: block;
   height: 40%;
@@ -397,6 +425,11 @@ body {
   }
   .register-guide {
     font-size: 16px;
+  }
+  .register-guide.top {
+    margin-top: -210px;
+  }
+  .register-guide.bottom {
     margin-top: 210px;
   }
   .knob {
@@ -406,6 +439,12 @@ body {
     margin-left: 160px;
     margin-top: -20px;
     border-radius: 4px;
+  }
+  .watch-mask .normal {
+    display: none;
+  }
+  .watch-mask .small {
+    display: block;
   }
   .one-screen .content-wrapper {
     height: 100%;
@@ -546,12 +585,12 @@ body {
     margin-top: 2%;
     font-size: 14px;
   }
-  #register .prize-info {
+  .register .prize-info {
     font-size: 18px;
     line-height: 24px;
     padding-top: 42px;
   }
-  #register .register-tip {
+  .register .register-tip {
     padding-top: 150px;
   }
 }

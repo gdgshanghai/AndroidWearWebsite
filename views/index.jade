@@ -17,10 +17,16 @@ html
     link(type='text/css', rel='stylesheet', href=ASSETPATH + 'css/main.css')
 
   body
-    .register-guide 向上滑动查看报名通道
+    .register-guide.top 向上滑动查看
+      a.gotoRegister 报名通道
+    .register-guide.bottom 向上滑动查看
+      a.gotoRegister 报名通道
     .watch-band
     .knob
     .container
+      .watch-mask
+        img.normal(src=ASSETPATH + 'image/watch-wrapper.png')
+        img.small(src=ASSETPATH + 'image/watch-wrapper-s.png')
       .watch-wrapper
         .swiper-container
           .swiper-wrapper
@@ -29,15 +35,14 @@ html
             .swiper-slide.one-screen
               .main-swiper.one-screen
                 include ./main-content.jade
-            .swiper-slide.one-screen#register
+            .swiper-slide.one-screen.register
               .content-wrapper.mask
-                a#register-btn(
+                a.register-btn(
                   href='https://jinshuju.net/f/Io6KcQ'
                   onclick="trackOutboundLink('https://jinshuju.net/f/Io6KcQ'); return false;"
                 )
                   .register-tip 立即报名
                 .prize-info 丰富内容，还有<br>大量礼品，等你来拿
-                //- .prize-info 活动还将赠送 2 块<br>Android Wear 手表
 
     script(type='text/javascript', src=ASSETPATH + 'js/global.js')
 

@@ -5,11 +5,14 @@
       mode: 'vertical',
       keyboardControl: true
     });
-    return mainSwiper = $('.main-swiper').swiper({
+    mainSwiper = $('.main-swiper').swiper({
       mode: 'horizontal',
       DOMAnimation: false,
       keyboardControl: true,
       loop: true
+    });
+    return $('.gotoRegister').on('click', function() {
+      return mySwiper.swipeTo(1);
     });
   });
 
